@@ -10,11 +10,8 @@ import java.security.PrivateKey;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
-
     RecyclerView mRecyclerView;
-
     private WordListAdapter mAdapter;
-    private LinkedList<String> mWordList = new LinkedList<>();
 
 
     @Override
@@ -22,68 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        mWordList.add("SQL");
-        mWordList.add("Java");
-        mWordList.add("C#");
-        
-
         mRecyclerView = findViewById(R.id.recyclerview);
-        mAdapter = new WordListAdapter(this, mWordList);
+        mAdapter = new WordListAdapter(this, PhotoData.generatePhotoData());
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
